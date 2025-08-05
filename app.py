@@ -9,13 +9,12 @@ import base64
 from dotenv import load_dotenv
 import os
 
-# Carga las variables del archivo .env
-load_dotenv() 
+import streamlit as st
 
-#configuracion del remitente, las variables de entorno estan definidas en el archivo .env
-sender_email = os.getenv('SENDER_EMAIL')
-password = os.getenv('EMAIL_PASSWORD')
-receiver_email = os.getenv('RECEIVER_EMAIL')
+sender_email = st.secrets["email"]["sender"]
+password = st.secrets["email"]["password"]
+receiver_email = st.secrets["email"]["receiver"]
+
 
 #envia correo de notificación
 def enviar_notificacion_html(correo_persona, fecha_hora):
@@ -127,4 +126,5 @@ st.markdown("""
     <div style="text-align: center; margin-top: 20px; color: #19277f;">
         <p>© 2025 Muelles y Frenos Simón Bolívar. Todos los derechos reservados.</p>
     </div>
+
 """, unsafe_allow_html=True)
