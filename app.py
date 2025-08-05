@@ -16,6 +16,9 @@ load_dotenv()
 sender_email = os.getenv('SENDER_EMAIL')
 password = os.getenv('EMAIL_PASSWORD')
 receiver_email = os.getenv('RECEIVER_EMAIL')
+sender_email = "notificacionesticsimonbolivar@gmail.com"
+password = "tvva tbwn hpjn lvwz"
+receiver_email = "tic3@repuestossimonbolivar.com"
 
 #envia correo de notificación
 def enviar_notificacion_html(correo_persona, fecha_hora):
@@ -128,5 +131,6 @@ st.markdown("""
     </div>
 
 """, unsafe_allow_html=True)
+
 
 
