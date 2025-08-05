@@ -91,7 +91,6 @@ imagen_placeholder.empty()
 if correo:
 # Guarda el clic
     st.session_state.clics.append(f"{fecha_hora} - {correo}")
-    st.write(f"¡Gracias {correo}! Tu clic ha sido registrado el {fecha_hora}.")
 # Enviar notificación
     enviar_notificacion_html(correo, fecha_hora)
   
@@ -128,3 +127,4 @@ st.markdown("""
     </div>
 
 """, unsafe_allow_html=True)
+
