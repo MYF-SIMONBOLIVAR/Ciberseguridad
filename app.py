@@ -87,7 +87,7 @@ html_img = mostrar_imagen("Campaña.png")
 imagen_placeholder.markdown(html_img, unsafe_allow_html=True)
 
 # Espera para simular carga de imagen
-time.sleep(7)
+time.sleep(5)
 
 imagen_placeholder.empty()
 
@@ -131,6 +131,7 @@ st.markdown("""
     </div>
 
 """, unsafe_allow_html=True)
+
 
 
 
